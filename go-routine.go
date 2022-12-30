@@ -15,7 +15,10 @@ func main() {
 	// fmt.Println("Hello, World")
 	fmt.Println("cpu-num, ", runtime.NumCPU())
 
+	// 等同设置线程池的线程数量
 	runtime.GOMAXPROCS(1)
+	// 线程可以通过runtime.Goexit() 来停止
+
 	var wg sync.WaitGroup
 	wg.Add(2)
 
